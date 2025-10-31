@@ -10,6 +10,8 @@
         "vite-plugin-symfony": "^8.2"
     },
     "dependencies": {
-        "@hotwired/stimulus": "^3.2.2"
+        "@hotwired/stimulus": "^3.2.2",
+        "@vitejs/plugin-vue": "^6.0.1",
+        "vue": "^3.5.22"
     }
 }
