@@ -59,6 +59,18 @@
             "bin/phpunit"
         ]
     },
+    "skipthedragon/inertia-bundle": {
+        "version": "1.1",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "main",
+            "version": "1.0",
+            "ref": "1a4b069057491f799e12a412810180eefd622fcf"
+        },
+        "files": [
+            "config/packages/inertia.yaml"
+        ]
+    },
     "symfony/asset-mapper": {
         "version": "7.3",
         "recipe": {

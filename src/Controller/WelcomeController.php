@@ -4,14 +4,16 @@ namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Attribute\Route;
+use Symfony\Component\Routing\Annotation\Route;
+use Rompetomp\InertiaBundle\Architecture\InertiaInterface;
+
 
 final class WelcomeController extends AbstractController
 {
         #[Route('/', name: 'home')]
-    public function index(): Response
+    public function index(InertiaInterface $inertia): Response
     {
-        return $this->render('base.html.twig');
+        return $inertia->render('App', ['name' => 'Corentin']);
     }
 
 }
