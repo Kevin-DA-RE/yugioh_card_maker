@@ -1,5 +1,7 @@
 import { createApp, h } from "vue";
 import { createInertiaApp } from "@inertiajs/vue3";
+// Import global styles (Tailwind + custom theme)
+import "./styles/app.css";
 
 // 👇 import.meta.glob scanne dynamiquement toutes les pages du dossier Pages
 createInertiaApp({
