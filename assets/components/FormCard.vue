@@ -76,7 +76,7 @@ const onReset = () => {
                 <FormMessage />
             </FormItem>
         </FormField>
-        <Button type="submit">
+        <Button :variant="'outline'" type="submit">
             {{labelSubmit}}
         </Button>
     </form>

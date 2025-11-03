@@ -8,6 +8,6 @@ defineProps({ name: String });
     <h1 class="text-4xl font-extrabold text-white  mb-6">
         {{ name }}
     </h1>
-    <Form />
+    <Form :mode="'updateCard'"/>
 
 </template>
