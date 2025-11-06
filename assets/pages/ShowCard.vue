@@ -1,13 +1,39 @@
 <script setup>
-import Form from '../components/FormCard.vue'
-defineProps({ name: String });
-
+defineProps({ cards: Array });
 </script>
 
 <template>
-    <h1 class="text-4xl font-extrabold text-white  mb-6">
+    <h1 class="text-4xl font-extrabold text-white mb-6">
         {{ name }}
     </h1>
-    <Form :mode="'updateCard'"/>
 
+    <ul v-for="card in cards" :key="card.id">
+        <li class="text-white">
+            {{ card.name }}
+        </li>
+        <li class="text-white">
+            {{ card.attributs }}
+        </li>
+        <li class="text-white">
+            {{ card.description }}
+        </li>
+        <li class="text-white">
+            {{ card.attaque }}
+        </li>
+        <li class="text-white">
+            {{ card.defense }}
+        </li>
+        <li class="text-white">
+            {{ card.race }}
+        </li>
+        <li class="text-white">
+            {{ card.structure }}
+        </li>
+        <li class="text-white">
+            {{ card.type }}
+        </li>
+        <li class="text-white">
+            {{ card.level }}
+        </li>
+    </ul>
 </template>

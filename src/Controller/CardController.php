@@ -15,8 +15,7 @@ final class CardController extends AbstractController
     public function index(InertiaInterface $inertia, CardRepository $cardRepository): Response
     {
         $cards = $cardRepository->showCard();
-        dd($cards);
-        return $inertia->render('ShowCard', ['name' => 'ShowCard']);
+        return $inertia->render('ShowCard', ['cards' => $cards]);
     }
     #[Route('/create-card', name: 'create_card')]
     public function createCard(InertiaInterface $inertia): Response
