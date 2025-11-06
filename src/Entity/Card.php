@@ -20,8 +20,8 @@ class Card
     #[ORM\Column(length: 255)]
     private ?string $name = null;
 
-    #[ORM\Column(type: Types::ARRAY)]
-    private array $typeline = [];
+    #[ORM\Column(length: 255)]
+    private ?string $typeline = null;
 
     #[ORM\Column(type: Types::TEXT)]
     private ?string $description = null;
@@ -84,12 +84,12 @@ class Card
         return $this;
     }
 
-    public function getTypeline(): array
+    public function getTypeline(): string
     {
         return $this->typeline;
     }
 
-    public function setTypeline(array $typeline): static
+    public function setTypeline(string $typeline): static
     {
         $this->typeline = $typeline;
 
