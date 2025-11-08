@@ -7,6 +7,7 @@ use App\Entity\Atk;
 use App\Entity\Card;
 use App\Entity\Def;
 use App\Entity\FrameType;
+use App\Entity\Genre;
 use App\Entity\Level;
 use App\Entity\Race;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
@@ -42,13 +43,15 @@ class CardRepository extends ServiceEntityRepository
             'r.name as race',
             'arc.name as structure',
             'f.name as type',
-            'l.number as level'))
+            'l.number as level',
+            'g.name as genre'))
             ->join(Atk::class, 'a', 'WITH', 'c.atk = a.id')
             ->join(Def::class, 'd', 'WITH', 'c.def = d.id')
             ->join(Race::class, 'r', 'WITH', 'c.race = r.id')
             ->join(Archetype::class, 'arc', 'WITH', 'c.archetype = arc.id')
             ->join(FrameType::class, 'f', 'WITH', 'c.frametype = f.id')
             ->join(Level::class, 'l', 'WITH', 'c.level = l.id')
+            ->join(Genre::class, 'g', 'WITH', 'c.genre = g.id')
             ->getQuery()
             ->getResult()
         ;

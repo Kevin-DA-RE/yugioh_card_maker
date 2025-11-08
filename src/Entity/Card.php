@@ -54,6 +54,9 @@ class Card
     #[ORM\ManyToOne(inversedBy: 'cards')]
     private ?Level $level = null;
 
+    #[ORM\ManyToOne(inversedBy: 'cards')]
+    private ?Genre $genre = null;
+
 
     public function getId(): ?int
     {
@@ -212,6 +215,18 @@ class Card
     public function setLevel(?Level $level): static
     {
         $this->level = $level;
+
+        return $this;
+    }
+
+    public function getGenre(): ?Genre
+    {
+        return $this->genre;
+    }
+
+    public function setGenre(?Genre $genre): static
+    {
+        $this->genre = $genre;
 
         return $this;
     }

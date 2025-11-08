@@ -35,5 +35,9 @@ defineProps({ cards: Array });
         <li class="text-white">
             {{ card.level }}
         </li>
+        <li class="text-white">
+            {{ card.genre }}
+            <img src="../styles/light.webp" alt="" />
+        </li>
     </ul>
 </template>
