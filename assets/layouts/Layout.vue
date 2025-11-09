@@ -5,7 +5,7 @@ defineProps({ name: String });
 
 <template>
     <NeuralBg class="absolute inset-0 -z-50" />
-    <div class="z-10">
+    <div class="z-10 h-screen w-screen overflow-hidden">
         <slot />
     </div>
 </template>
